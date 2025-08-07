@@ -6,10 +6,10 @@
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>alex@viftrup.eu (Alexander Viftrup Andersen)</managingEditor>
             <webMaster>alex@viftrup.eu (Alexander Viftrup Andersen)</webMaster><lastBuildDate>Sun, 01 Dec 2019 21:57:40 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/html/" rel="self" type="application/rss+xml" /><item>
     <title>Basic Markdown Syntax</title>
-    <link>http://localhost:1313/posts/first_post/</link>
+    <link>http://localhost:1313/posts-copy/first_post/</link>
     <pubDate>Sun, 01 Dec 2019 21:57:40 &#43;0800</pubDate>
     <author>Viftrup</author>
-    <guid>http://localhost:1313/posts/first_post/</guid>
+    <guid>http://localhost:1313/posts-copy/first_post/</guid>
     <description><![CDATA[<p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files.</p>]]></description>
 </item>
 </channel>

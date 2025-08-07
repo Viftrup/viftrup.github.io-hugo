@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts Copies on Viftrups Tech Blog</title>
+    <link>http://localhost:1313/posts-copy/</link>
+    <description>Recent content in Posts Copies on Viftrups Tech Blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>alex@viftrup.eu (Alexander Viftrup Andersen)</managingEditor>
+    <webMaster>alex@viftrup.eu (Alexander Viftrup Andersen)</webMaster>
+    <lastBuildDate>Fri, 25 Nov 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts-copy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Intercepting HTTPS traffic and redirecting to custom block page</title>
+      <link>http://localhost:1313/posts-copy/intercepting-https-traffic-and-redirecting-to-custom-block-page/</link>
+      <pubDate>Fri, 25 Nov 2022 00:00:00 +0000</pubDate><author>alex@viftrup.eu (Alexander Viftrup Andersen)</author>
+      <guid>http://localhost:1313/posts-copy/intercepting-https-traffic-and-redirecting-to-custom-block-page/</guid>
+      <description>&lt;p&gt;Blocking specific internet categories or malicious activity based on DNS is becoming more popular, and often requires very little effort by the IT-department to implement.&lt;/p&gt;&#xA;&lt;p&gt;It introduces an efficient protection/enforcement of security and policies, with relatively low “time-to-action”&lt;/p&gt;&#xA;&lt;p&gt;Especially Cisco Umbrella which offers a range of DNS protection mechanisms does this very well - however there is a lot of different vendors which provides this kind of protection. (NGFWs might also be able to do parts of this)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Basic Markdown Syntax</title>
+      <link>http://localhost:1313/posts-copy/first_post/</link>
+      <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate><author>alex@viftrup.eu (Alexander Viftrup Andersen)</author>
+      <guid>http://localhost:1313/posts-copy/first_post/</guid>
+      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
