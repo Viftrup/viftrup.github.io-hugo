@@ -122,7 +122,7 @@ Including the consumer-friendly [Pi-Hole](https://pi-hole.net/) solution.
 
 As frustrating as it might seems, this is for the greater good and by the standard of the HTTPS protocol.
 
-[blockpage]: b62f9ed-block_page_example.jpeg  "Picture shows "example.com" - this could be "facebook.com""
+[block-page]: b62f9ed-block_page_example.jpeg  "Picture shows "example.com" - this could be "facebook.com""
 
 ![Alt text][id]
 
