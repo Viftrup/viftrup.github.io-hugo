@@ -1,2 +1,5 @@
-#Ignore Obsidian
+# Obsidian
 .obsidian
+
+# Exclude macOS Finder (System Explorer) View States
+.DS_Store
