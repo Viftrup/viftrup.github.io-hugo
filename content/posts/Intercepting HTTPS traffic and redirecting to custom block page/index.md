@@ -70,8 +70,7 @@ With that in mind we continue to look at the redirect to a block page, in case o
 If the employee were to enter **http**facebook.com (and not being redirected to the HTTPS version) they would be blocked, and by ex. Cisco Umbrella be redirected for a customized block page hosted by Cisco Umbrella, which has nothing to do with facebook.com
 
 
-![HTTP example.com block page][block-page]
-![HTTP example.com block page](b62f9ed-block_page_example.jpeg "Picture shows "example.com" - this could be "facebook.com")
+![HTTP example.com block page](b62f9ed-block_page_example.jpeg "Picture shows example.com - this could be facebook.com")
 
 *Picture shows "example.com" - this could be "facebook.com"*
 
@@ -122,5 +121,3 @@ Including the consumer-friendly [Pi-Hole](https://pi-hole.net/) solution.
   
 
 As frustrating as it might seems, this is for the greater good and by the standard of the HTTPS protocol.
-
-[block-page]: b62f9ed-block_page_example.jpeg  "Picture shows "example.com" - this could be "facebook.com""

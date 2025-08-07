@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Intercepting HTTPS traffic and redirecting to custom block page - Viftrups Tech Blog</title><meta name="Description" content="Blocking specific internet categories or malicious activity based on DNS is becoming more popular, and often requires very little effort by the IT-department to implement. It introduces an efficient protection/enforcement of security and policies, with relatively low “time-to-action"><meta property="og:url" content="http://localhost:1313/posts/intercepting-https-traffic-and-redirecting-to-custom-block-page/">
+  <meta property="og:site_name" content="Viftrups Tech Blog">
+  <meta property="og:title" content="Intercepting HTTPS traffic and redirecting to custom block page">
+  <meta property="og:description" content="Blocking specific internet categories or malicious activity based on DNS is becoming more popular, and often requires very little effort by the IT-department to implement. It introduces an efficient protection/enforcement of security and policies, with relatively low “time-to-action">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-11-25T00:00:00+00:00">
+    <meta property="article:modified_time" content="2022-11-25T00:00:00+00:00">
+    <meta property="article:tag" content="Umbrella">
+    <meta property="article:tag" content="Security">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Intercepting HTTPS traffic and redirecting to custom block page">
+  <meta name="twitter:description" content="Blocking specific internet categories or malicious activity based on DNS is becoming more popular, and often requires very little effort by the IT-department to implement. It introduces an efficient protection/enforcement of security and policies, with relatively low “time-to-action">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/intercepting-https-traffic-and-redirecting-to-custom-block-page/" /><link rel="prev" href="http://localhost:1313/posts/first_post/" /><link rel="next" href="http://localhost:1313/posts/blog/third-post/third-post/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Intercepting HTTPS traffic and redirecting to custom block page",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/posts\/intercepting-https-traffic-and-redirecting-to-custom-block-page\/"
+        },"genre": "posts","keywords": "Umbrella, Security","wordcount":  1093 ,
+        "url": "http:\/\/localhost:1313\/posts\/intercepting-https-traffic-and-redirecting-to-custom-block-page\/","datePublished": "2022-11-25T00:00:00+00:00","dateModified": "2022-11-25T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Viftrup"
+            },"description": "Blocking specific internet categories or malicious activity based on DNS is becoming more popular, and often requires very little effort by the IT-department to implement. It introduces an efficient protection/enforcement of security and policies, with relatively low “time-to-action"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Viftrups Tech Blog">Viftrups Nerdy Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Viftrups Tech Blog">Viftrups Nerdy Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Intercepting HTTPS traffic and redirecting to custom block page</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://viftrup.eu" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Viftrup</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-11-25">2022-11-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1093 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;6 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#intercepting-https-requests-and-redirect-to-block-page">Intercepting HTTPS requests and redirect to block page</a></li>
+    <li><a href="#closing-remarks">Closing remarks</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Blocking specific internet categories or malicious activity based on DNS is becoming more popular, and often requires very little effort by the IT-department to implement.</p>
+<p>It introduces an efficient protection/enforcement of security and policies, with relatively low “time-to-action”</p>
+<p>Especially Cisco Umbrella which offers a range of DNS protection mechanisms does this very well - however there is a lot of different vendors which provides this kind of protection. (NGFWs might also be able to do parts of this)</p>
+<p>(Cisco Umbrella is also known as OpenDNS, and private consumers can also leverage some of the functionalities using this link <a href="https://www.opendns.com/home-internet-security/" target="_blank" rel="noopener noreffer ">OpenDNS Services</a></p>
+<p>Often enforcing and blocking specific internet-categories (either being due to company policies, or in order to protect employees from entering malicious sites) introduces more incoming tickets for the IT/Network department, as employees might not be able to access sites which they previously had no issues browsing. An example could be in order to boost employee productivity, the company has decided to block all websites being classified as &ldquo;Social Media&rdquo; by policy, which means Facebook.com would be inaccessible.</p>
+<p>Depending on how the implementation is done this might be frustrating for the employees and could result in being shown &ldquo;Connection Reset&rdquo; or &ldquo;Site could not be reached&rdquo; error message in the browser. Often this would raise a ticket towards the operations as the employee thinks their computer is without internet or experiencing a network error.</p>
+<p>Imagine this being a big company, with several thousands of users trying to access Facebook.com from the cooperative network, this could potentially mean in increase of calls or tickets being sent at the daily operations team stating that their endpoints can no longer surf the internet.</p>
+<p>Another solution to this could be by introducing a &ldquo;block page&rdquo; which would basically redirect the employee to a customized website created by the IT-department, stating that facebook.com is blocked due to company policy and where to send complaint, if they disagree on the block.</p>
+<p>By redirecting the employee to this page, it could reduce the number of incoming calls and tickets for the operations team, as the user is informed this only relates to the domain of facebook.com being blocked, and with a statement why this has been implemented.</p>
+<p>However, this can pose another technical issue in the modern days of security and network - intercepting HTTPS requests.</p>
+<h2 id="intercepting-https-requests-and-redirect-to-block-page">Intercepting HTTPS requests and redirect to block page</h2>
+<p>Nowadays the most common internet-browsing protocol is known as HTTP and its successor HTTPS (S for Secure).</p>
+<p>HTTP was a great protocol back in the days, but as technology evolved and security becoming mandatory. The majority of browsing in 2022 is using the more secure HTTP<strong>S</strong> variant which introduces the use of authentication by exchanging certificate information between endpoint and server.</p>
+<p>Certificates is introduced in order to keep data secure, verify the ownership of the website and to prevent attackers from creating fake/look-a-like websites and tricking users into entering personal data on the attacker’s website, instead of your ex. web-banking application.</p>
+<p>With that in mind we continue to look at the redirect to a block page, in case of an employee entering Facebook.com and being blocked.</p>
+<p>If the employee were to enter <strong>http</strong>facebook.com (and not being redirected to the HTTPS version) they would be blocked, and by ex. Cisco Umbrella be redirected for a customized block page hosted by Cisco Umbrella, which has nothing to do with facebook.com</p>
+<p><figure><a class="lightgallery" href="/posts/intercepting-https-traffic-and-redirecting-to-custom-block-page/b62f9ed-block_page_example.jpeg" title="HTTP example.com block page" data-thumbnail="/posts/intercepting-https-traffic-and-redirecting-to-custom-block-page/b62f9ed-block_page_example.jpeg" data-sub-html="<h2>Picture shows example.com - this could be facebook.com</h2><p>HTTP example.com block page</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/posts/intercepting-https-traffic-and-redirecting-to-custom-block-page/b62f9ed-block_page_example.jpeg"
+            data-srcset="/posts/intercepting-https-traffic-and-redirecting-to-custom-block-page/b62f9ed-block_page_example.jpeg, /posts/intercepting-https-traffic-and-redirecting-to-custom-block-page/b62f9ed-block_page_example.jpeg 1.5x, /posts/intercepting-https-traffic-and-redirecting-to-custom-block-page/b62f9ed-block_page_example.jpeg 2x"
+            data-sizes="auto"
+            alt="/posts/intercepting-https-traffic-and-redirecting-to-custom-block-page/b62f9ed-block_page_example.jpeg" width="613" height="406" />
+    </a><figcaption class="image-caption">Picture shows example.com - this could be facebook.com</figcaption>
+    </figure></p>
+<p><em>Picture shows &ldquo;example.com&rdquo; - this could be &ldquo;facebook.com&rdquo;</em></p>
+<p>In other terms Umbrella did a kind of &ldquo;man-in-the-middle&rdquo; attack, meaning that Umbrella &ldquo;hi-jacked&rdquo; the request from the employee. The policy it told Umbrella not to allow facebook.com and instead redirected the users browser to a different domain presenting the Cisco Umbrella block-page, and not the Facebook news feed.</p>
+<p>This was straight forward as the request wasn&rsquo;t sent with the HTTP<strong>S</strong> protocol, meaning there was no certificate validation if the employee communicated with the facebook.com webserver or was (hi-jacked) redirected onto another page/webserver - ex. the Umbrella block-page.</p>
+<p>If the employee were to enter the HTTPS version of Facebook (http<strong>s</strong>://facebook.com) and thereby requiring validation and certificate exchange between the employee endpoint and the facebook.com webserver, the scenario would be different.</p>
+<p>In that case the employee&rsquo;s web browser would expect to be presented by a certificate matching the CN (Common Name) of “www.facebook.com” - however due to the policy put in place, we don&rsquo;t want the employee to enter facebook.com but instead we want to present the Cisco Umbrella block-page.</p>
+<p>Due to the HTTPS protocol being used, Umbrella is forced to do another &ldquo;man-in-the-middle” attack and in order to convince the endpoint browser, it will generate a per-domain certificate issued by Umbrella Sub-CA matching the CN of “www.facebook.com”, and thereby “trick” the browser to continue the exchange and possibility for Umbrella to decrypt the traffic – even though it’s a “fake” certificate. This makes it possible for Umbrella to redirect the browser onto the desired block page, hosted on a separate domain.</p>
+<p><figure><a class="lightgallery" href="/posts/intercepting-https-traffic-and-redirecting-to-custom-block-page/facebook-umbrella-certificate.png" title="HTTPS Facebook.com Umbrella certificate" data-thumbnail="/posts/intercepting-https-traffic-and-redirecting-to-custom-block-page/facebook-umbrella-certificate.png" data-sub-html="<h2>HTTPS Facebook.com Umbrella certificate</h2><p>HTTPS Facebook.com Umbrella certificate</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/posts/intercepting-https-traffic-and-redirecting-to-custom-block-page/facebook-umbrella-certificate.png"
+            data-srcset="/posts/intercepting-https-traffic-and-redirecting-to-custom-block-page/facebook-umbrella-certificate.png, /posts/intercepting-https-traffic-and-redirecting-to-custom-block-page/facebook-umbrella-certificate.png 1.5x, /posts/intercepting-https-traffic-and-redirecting-to-custom-block-page/facebook-umbrella-certificate.png 2x"
+            data-sizes="auto"
+            alt="/posts/intercepting-https-traffic-and-redirecting-to-custom-block-page/facebook-umbrella-certificate.png" width="447" height="309" />
+    </a><figcaption class="image-caption">HTTPS Facebook.com Umbrella certificate</figcaption>
+    </figure></p>
+<p>If all webservers were allowed to do a “man-in-the-middle” attack such as this, we would be facing a major problem. It would potentially allow any webserver to pose as your bank’s webserver for example. To mitigate this your web browser must trust the issuing certificate server.</p>
+<p>The Umbrella Root CA is not automatically trusted by computers and browsers (that is the issuer of the certificate), meaning that without any certificates manually stored on the endpoint or pushed through MDM/GPOs the redirect of Umbrella would present the famous &ldquo;Your connection is not secure/private&rdquo; due to the certificate-chain not being trusted. And the company of course had security awareness training of employees learning that they should <strong>never</strong> bypass such warning.</p>
+<p>And since over 80% of today’s webservers enforce the HTTPS protocol, this would be a common scenario. In order to make this efficient, it is highly recommended to push the &ldquo;middle-man&rdquo; (Umbrella certificate in this case) onto the company machines either through MDM-software or Group Policies in AD.</p>
+<p>For BYOD (Bring Your Own Device) scenarios where you&rsquo;re not in charge of the systems, there unfortunately isn&rsquo;t any possibility to have this block page shown efficiently over a HTTPS connection. Unless manually trusting the certificate or proceeding through the warning.</p>
+<h2 id="closing-remarks">Closing remarks</h2>
+<p>This will be the scenario no matter if you&rsquo;re using Cisco Umbrella or another 3rd part solution for this kind of DNS/block page protection.</p>
+<p>Including the consumer-friendly <a href="https://pi-hole.net/" target="_blank" rel="noopener noreffer ">Pi-Hole</a> solution.</p>
+<p>As frustrating as it might seems, this is for the greater good and by the standard of the HTTPS protocol.</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-11-25</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://localhost:1313/posts/intercepting-https-traffic-and-redirecting-to-custom-block-page/" data-title="Intercepting HTTPS traffic and redirecting to custom block page" data-hashtags="Umbrella,Security"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/intercepting-https-traffic-and-redirecting-to-custom-block-page/" data-hashtag="Umbrella"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/intercepting-https-traffic-and-redirecting-to-custom-block-page/" data-title="Intercepting HTTPS traffic and redirecting to custom block page"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://localhost:1313/posts/intercepting-https-traffic-and-redirecting-to-custom-block-page/" data-title="Intercepting HTTPS traffic and redirecting to custom block page"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/intercepting-https-traffic-and-redirecting-to-custom-block-page/" data-title="Intercepting HTTPS traffic and redirecting to custom block page"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/umbrella/">Umbrella</a>,&nbsp;<a href="/tags/security/">Security</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/first_post/" class="prev" rel="prev" title="Basic Markdown Syntax"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Basic Markdown Syntax</a>
+            <a href="/posts/blog/third-post/third-post/" class="next" rel="next" title="Third Post">Third Post<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"lightgallery":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
