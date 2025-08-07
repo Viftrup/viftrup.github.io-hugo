@@ -69,7 +69,7 @@ With that in mind we continue to look at the redirect to a block page, in case o
 
 If the employee were to enter **http**facebook.com (and not being redirected to the HTTPS version) they would be blocked, and by ex. Cisco Umbrella be redirected for a customized block page hosted by Cisco Umbrella, which has nothing to do with facebook.com
 
-{{/*  ![HTTP example.com block page](b62f9ed-block_page_example.jpeg) */}}
+
 ![HTTP example.com block page][block-page]
 
 *Picture shows "example.com" - this could be "facebook.com"*
@@ -124,16 +124,9 @@ As frustrating as it might seems, this is for the greater good and by the standa
 
 [blockpage]: b62f9ed-block_page_example.jpeg  "Picture shows "example.com" - this could be "facebook.com""
 
-```markdown
-![Alt text][id]
-```
-
 ![Alt text][id]
 
 With a reference later in the document defining the URL location:
 
-```markdown
-[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
-```
 
 [id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
