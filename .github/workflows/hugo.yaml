@@ -74,7 +74,7 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "${{ http://hugo.viftrup.eu/ }}/" \
+            --baseURL "${{ steps.pages.outputs.base_url }}/" \
             --cacheDir "${{ runner.temp }}/hugo_cache"
       - name: Cache Save
         id: cache-save
@@ -92,7 +92,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ http://hugo.viftrup.eu/ }}
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
     steps:
