@@ -25,7 +25,7 @@ It introduces an efficient protection/enforcement of security and policies, with
 
 Especially Cisco Umbrella which offers a range of DNS protection mechanisms does this very well - however there is a lot of different vendors which provides this kind of protection. (NGFWs might also be able to do parts of this)
 
-(Cisco Umbrella is also known as OpenDNS, and private consumers can also leverage some of the functionalities using this link [OpenDNS Services](https://www.opendns.com/home-internet-security/))
+(Cisco Umbrella is also known as OpenDNS, and private consumers can also leverage some of the functionalities using this link [OpenDNS Services](https://www.opendns.com/home-internet-security/)
 
   
 
@@ -67,9 +67,9 @@ With that in mind we continue to look at the redirect to a block page, in case o
 
   
 
-If the employee were to enter **http://facebook.com** (and not being redirected to the HTTPS version) they would be blocked, and by ex. Cisco Umbrella be redirected for a customized block page hosted by Cisco Umbrella, which has nothing to do with facebook.com
+If the employee were to enter **http**facebook.com (and not being redirected to the HTTPS version) they would be blocked, and by ex. Cisco Umbrella be redirected for a customized block page hosted by Cisco Umbrella, which has nothing to do with facebook.com
 
-![HTTP example.com block page](/assets/pictures/b62f9ed-block_page_example.jpeg)
+![HTTP example.com block page](b62f9ed-block_page_example.jpeg)
 
 <center>*Picture shows "example.com" - this could be "facebook.com"*</center>
 
@@ -91,7 +91,7 @@ Due to the HTTPS protocol being used, Umbrella is forced to do another "man-in-t
 
   
 
-![HTTPS Facebook.com Umbrella certificate](/assets/pictures/facebook-umbrella-certificate.png)
+![HTTPS Facebook.com Umbrella certificate](facebook-umbrella-certificate.png)
 
   
 
