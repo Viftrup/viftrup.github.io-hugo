@@ -14,9 +14,9 @@
   # date format
   dateFormat = "2006-01-02"
   # website title for Open Graph and Twitter Cards
-  title = ""
+  title = "Viftrups Nerdy Blog"
   # website description for RSS, SEO, Open Graph and Twitter Cards
-  description = "This is my cool site"
+  description = "Random security stuff by a tech nerd"
   # website images for Open Graph and Twitter Cards
   images = []
 
