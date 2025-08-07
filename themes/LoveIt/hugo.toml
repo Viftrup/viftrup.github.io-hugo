@@ -124,7 +124,7 @@
     rss = 10
     # Home page profile
     [params.home.profile]
-      enable = true
+      enable = false
       # Gravatar Email for preferred avatar in home page
       gravatarEmail = ""
       # URL of avatar shown in home page
