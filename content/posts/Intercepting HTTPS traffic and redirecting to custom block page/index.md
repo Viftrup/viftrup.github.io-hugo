@@ -71,6 +71,7 @@ If the employee were to enter **http**facebook.com (and not being redirected to 
 
 
 ![HTTP example.com block page][block-page]
+![HTTP example.com block page](b62f9ed-block_page_example.jpeg "Picture shows "example.com" - this could be "facebook.com")
 
 *Picture shows "example.com" - this could be "facebook.com"*
 
@@ -92,7 +93,7 @@ Due to the HTTPS protocol being used, Umbrella is forced to do another "man-in-t
 
   
 
-![HTTPS Facebook.com Umbrella certificate](facebook-umbrella-certificate.png)
+![HTTPS Facebook.com Umbrella certificate](facebook-umbrella-certificate.png "HTTPS Facebook.com Umbrella certificate")
 
   
 
