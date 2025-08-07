@@ -71,7 +71,7 @@ If the employee were to enter **http**facebook.com (and not being redirected to 
 
 ![HTTP example.com block page](b62f9ed-block_page_example.jpeg)
 
-<center>*Picture shows "example.com" - this could be "facebook.com"*</center>
+*Picture shows "example.com" - this could be "facebook.com"*
 
   
 
